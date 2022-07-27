@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Leaderboard
--This project displays a to-do-list built using Webpack and JavaScript modules. The list allows the user to add or remove tasks from the display list and update the same in the local storage. It also allows the user to check using a checkbox icon and clear the checked items.
+-This project displays a to-do-list built using Webpack and JavaScript modules. The site allows the user to utitlize API to add or get scores of players.
 
 ## Built With
 
@@ -15,11 +15,13 @@
 
 ### Setup
 - HTML, CSS, linters
+- Webpack
 - NodeJs Installed
 
 
 ### Live Demo
 [Link](https://github.com/r-ahmed2022/Leaderboard/dist/)
+
 ### Getting Started
 To get a local copy for practice or as a template, follow these simple steps.
 
