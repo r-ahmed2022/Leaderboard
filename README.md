@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Leaderboard
--This project displays a to-do-list built using Webpack and JavaScript modules. The site allows the user to utitlize API to add or get scores of players.
+-This project displays a Leaderboard built using Webpack and JavaScript modules. The site allows the user to utitlize API to add or get scores of players.
 
 ## Built With
 
