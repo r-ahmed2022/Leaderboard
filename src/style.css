@@ -12,7 +12,6 @@ body {
 
 h1 {
   font-weight: bold;
-
 }
 
 h3 {
@@ -91,16 +90,15 @@ h3 {
   box-shadow: 1px 1px 1px 2px #000;
 }
 
-
 @media (max-width: 500px) {
-
   #container {
     width: 100%;
     flex-direction: column;
     align-items: center;
   }
 
-  #score-card, #add-score{
+  #score-card,
+  #add-score {
     width: 100%;
     height: auto;
   }
@@ -109,21 +107,22 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    margin: 20px 0;
   }
 
   #list > li {
-   width: 100%;
-   text-align: center;
-   font-size: 1.5rem;
-   }
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
 
-  #score-card > #list-header
-{
-  display: flex;
-  flex-direction: column;
- justify-content: space-around;
- align-items: center;
-}
+  #score-card > #list-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
 
   h1 {
     font-weight: bold;
@@ -141,10 +140,4 @@ h3 {
   #add {
     width: auto;
   }
-
-  #list {
-    width: 100%;
-    margin: 20px 0;
-  }
-
 }
