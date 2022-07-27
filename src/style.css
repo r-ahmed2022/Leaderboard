@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  margin-top: 2%;
+  border: 2px solid #000;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+#container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#score-card {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+#list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#list-header > button {
+  padding: 5px;
+  border: none;
+  background: none;
+  box-shadow: 1px 1px 1px 2px #000;
+}
+
+#list {
+  border: 2px solid #000;
+  border-radius: 5px;
+  padding: 0 2px;
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+#list > li {
+  list-style: none;
+  padding: 2px;
+  margin: 4px;
+}
+
+#list > li:nth-child(even) {
+  background-color: #d3d3d3;
+}
+
+#add-score {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+#score-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#score-form > input {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 2px solid #000;
+}
+
+#add {
+  width: auto;
+  padding: 5px;
+  margin: auto;
+  margin-right: 0;
+  border: none;
+  background: none;
+  box-shadow: 1px 1px 1px 2px #000;
+}
+
+@media (max-width: 500px) {
+  #container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #score-card,
+  #add-score {
+    width: 100%;
+    height: auto;
+  }
+
+  #list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  #list > li {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  #score-card > #list-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    display: block;
+  }
+
+  h3 {
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  #add {
+    width: auto;
+  }
+}
