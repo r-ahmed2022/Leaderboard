@@ -12,17 +12,17 @@ let players;
 
 window.addEventListener('load', () => {
   displayData(players, playerDiv);
-});
 
-refreshBtn.addEventListener('click', () => {
-  displayData(players, playerDiv);
-});
+  refreshBtn.addEventListener('click', () => {
+    displayData(players, playerDiv);
+  });
 
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  e.stopPropagation();
-  await addPlayerScore(name, score);
-  displayData(players, playerDiv);
-  name.value = '';
-  score.value = '';
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    await addPlayerScore(name, score);
+    displayData(players, playerDiv);
+    name.value = '';
+    score.value = '';
+  });
 });

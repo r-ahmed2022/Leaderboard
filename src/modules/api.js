@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import showTopPlayers from './showTopPlayers.js';
 
-export const displayData = (players, playerDiv) => {
+export const displayData = async (players, playerDiv) => {
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/24c0c3c116974ac49488d4eb0267ade3/scores')
     .then((response) => response.json())
     .then((json) => {
@@ -12,7 +12,7 @@ export const displayData = (players, playerDiv) => {
 
 export const newGame = () => {
   const obj = {
-    name: 'Kashmir Champion League',
+    name: 'Kashmir League',
   };
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/24c0c3c116974ac49488d4eb0267ade3/scores', {
     method: 'POST',
