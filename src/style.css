@@ -43,6 +43,7 @@ h3 {
   border: none;
   background: none;
   box-shadow: 1px 1px 1px 2px #000;
+  cursor: pointer;
 }
 
 #list {
@@ -51,6 +52,7 @@ h3 {
   padding: 0 2px;
   margin: 0;
   font-size: 1.3rem;
+  height: auto;
 }
 
 #list > li {
@@ -88,6 +90,39 @@ h3 {
   border: none;
   background: none;
   box-shadow: 1px 1px 1px 2px #000;
+  cursor: pointer;
+}
+
+.top-ranks {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 1px 1px 2px 4px #ccc;
+}
+
+.top-ranks-person {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15%;
+}
+
+.player {
+  border-radius: 5px;
+  font-size: 24px;
+  margin: 3px;
+  text-indent: 5px;
+}
+
+.player:nth-child(even) {
+  background: #ccc;
 }
 
 @media (max-width: 500px) {
