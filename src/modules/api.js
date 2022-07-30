@@ -1,20 +1,20 @@
 /* eslint-disable linebreak-style */
-import showRanks from './showRanks.js';
+import showTopPlayers from './showTopPlayers.js';
 
-export const refreshApiData = (players, playerBox) => {
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a9b9cdf78dfb964d4ad19ba5e0292907;o=1/scores')
+export const displayData = (players, playerDiv) => {
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a9b9cdf78dfb964d4ad19ba5e0292980;o=1/scores')
     .then((response) => response.json())
     .then((json) => {
       players = json.result;
-      showRanks(players, playerBox);
+      showTopPlayers(players, playerDiv);
     });
 };
 
-export const createGame = () => {
+export const newGame = () => {
   const obj = {
-    name: 'FIFA',
+    name: 'Kashmir Champion League',
   };
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a9b9cdf78dfb964d4ad19ba5e0292980/scores', {
     method: 'POST',
     body: JSON.stringify(obj),
     headers: {
@@ -25,12 +25,12 @@ export const createGame = () => {
     .then((json) => json);
 };
 
-export const addEntry = async (name, score) => {
+export const addPlayerScore = async (name, score) => {
   const obj = {
     user: name.value,
     score: score.value,
   };
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a9b9cdf78dfb964d4ad19ba5e0292907;o=1/scores', {
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a9b9cdf78dfb964d4ad19ba5e0292980;o=1/scores', {
     method: 'POST',
     body: JSON.stringify(obj),
     headers: {

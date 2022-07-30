@@ -1,8 +1,8 @@
 /* eslint-disable linebreak-style */
-const showRanks = (player, output) => {
-  const apiData = player.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
+const showTopPlayers = (player, output) => {
+  const data = player.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
   output.innerHTML = '';
-  apiData.forEach((play, index) => {
+  data.forEach((play, index) => {
     if (index === 0) {
       document.querySelector('.first-person').innerHTML = `${play.user}`;
       document.querySelector('.first-score').innerHTML = `${play.score}`;
@@ -15,4 +15,4 @@ const showRanks = (player, output) => {
     } else if (index > 2 && index < 10) { output.innerHTML += `<p class="player">${play.user} : ${play.score}</p>`; }
   });
 };
-export default showRanks;
+export default showTopPlayers;
