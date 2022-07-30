@@ -2,7 +2,7 @@
 import showTopPlayers from './showTopPlayers.js';
 
 export const displayData = (players, playerDiv) => {
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a9b9cdf78dfb964d4ad19ba5e0292980;o=1/scores')
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/24c0c3c116974ac49488d4eb0267ade3/scores')
     .then((response) => response.json())
     .then((json) => {
       players = json.result;
@@ -14,7 +14,7 @@ export const newGame = () => {
   const obj = {
     name: 'Kashmir Champion League',
   };
-  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a9b9cdf78dfb964d4ad19ba5e0292980/scores', {
+  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/24c0c3c116974ac49488d4eb0267ade3/scores', {
     method: 'POST',
     body: JSON.stringify(obj),
     headers: {
@@ -30,7 +30,7 @@ export const addPlayerScore = async (name, score) => {
     user: name.value,
     score: score.value,
   };
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/a9b9cdf78dfb964d4ad19ba5e0292980;o=1/scores', {
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/24c0c3c116974ac49488d4eb0267ade3/scores', {
     method: 'POST',
     body: JSON.stringify(obj),
     headers: {

@@ -52,6 +52,7 @@ h3 {
   padding: 0 2px;
   margin: 0;
   font-size: 1.3rem;
+  height: auto;
 }
 
 #list > li {
