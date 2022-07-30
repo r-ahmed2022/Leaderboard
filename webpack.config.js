@@ -1,7 +1,9 @@
 /* eslint-disable linebreak-style */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
+const ghpages = require('gh-pages');
 
+ghpages.publish('dist', () => {});
 module.exports = {
   mode: 'development',
   entry: { index: path.resolve(__dirname, 'src', 'index.js') },
