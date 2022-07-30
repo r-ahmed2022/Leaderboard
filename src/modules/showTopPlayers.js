@@ -12,7 +12,7 @@ const showTopPlayers = (player, output) => {
     } else if (index === 2) {
       document.querySelector('.third-person').innerHTML = `${play.user}`;
       document.querySelector('.third-score').innerHTML = `${play.score}`;
-    } else if (index > 2 && index < 10) { output.innerHTML += `<li class="player">${play.user} : ${play.score}</li>`; }
+    } else if (index > 2 && index < player.length) { output.innerHTML += `<li class="player">${play.user} : ${play.score}</li>`; }
   });
 };
 export default showTopPlayers;
